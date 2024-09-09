@@ -1,0 +1,109 @@
+[class^="fi-"],
+[class*=" fi-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "Ecommerce" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fi-arrow-up:before {
+	content: "\e910";
+}
+.fi-arrow-down:before {
+	content: "\e911";
+}
+.fi-arrow-right:before {
+	content: "\e912";
+}
+.fi-arrow-left:before {
+	content: "\e913";
+}
+.fi-github:before {
+	content: "\e900";
+}
+.fi-instagram:before {
+	content: "\e901";
+}
+.fi-facebook:before {
+	content: "\e902";
+}
+.fi-twitter:before {
+	content: "\e903";
+}
+.fi-star-half:before {
+	content: "\e904";
+}
+.fi-star:before {
+	content: "\e905";
+}
+.fi-plus:before {
+	content: "\e906";
+}
+.fi-min:before {
+	content: "\e907";
+}
+.fi-tag:before {
+	content: "\e908";
+}
+.fi-check-circle:before {
+	content: "\e909";
+}
+.fi-mail:before {
+	content: "\e90a";
+}
+.fi-trash:before {
+	content: "\e90b";
+}
+.fi-chevron-left:before {
+	content: "\e90c";
+}
+.fi-chevron-up:before {
+	content: "\e90d";
+}
+.fi-chevron-right:before {
+	content: "\e90e";
+}
+.fi-chevron-down:before {
+	content: "\e90f";
+}
+.fi-arrow-up-bold:before {
+	content: "\e914";
+}
+.fi-arrow-down-bold:before {
+	content: "\e915";
+}
+.fi-arrow-right-bold:before {
+	content: "\e916";
+}
+.fi-arrow-left-bold:before {
+	content: "\e917";
+}
+.fi-filter:before {
+	content: "\e918";
+}
+.fi-check:before {
+	content: "\e919";
+}
+.fi-close:before {
+	content: "\e91a";
+}
+.fi-dots:before {
+	content: "\e91b";
+}
+.fi-user-1:before {
+	content: "\e91c";
+}
+.fi-cart:before {
+	content: "\e91d";
+}
+.fi-search-1:before {
+	content: "\e91e";
+}

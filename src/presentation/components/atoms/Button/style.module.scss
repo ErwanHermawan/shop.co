@@ -1,0 +1,23 @@
+@import "core/styles/_assets.scss";
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 145px;
+	padding: 15px 32px;
+	border-radius: 32px;
+	text-decoration: none;
+	outline: 0;
+	cursor: pointer;
+	text-align: center;
+	overflow: hidden;
+	border: 1px solid transparent;
+	@include font-size(16);
+	background-color: transparent;
+	@include remove-tap-highlight;
+	transition: all 0.3s ease;
+	font-weight: fw(medium);
+	@include medium {
+		padding: 11px 24px;
+	}
+}

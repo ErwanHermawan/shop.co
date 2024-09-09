@@ -1,0 +1,103 @@
+/* ==========================================================================
+ Init: Fonts
+ ========================================================================== */
+
+@font-face {
+	font-family: "Integral CF";
+	src: url("../../assets/fonts/IntegralCF-Regular.eot");
+	src: url("../../assets/fonts/IntegralCF-Regular.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../assets/fonts/IntegralCF-Regular.woff2") format("woff2"),
+		url("../../assets/fonts/IntegralCF-Regular.woff") format("woff"),
+		url("../../assets/fonts/IntegralCF-Regular.ttf") format("truetype"),
+		url("../../assets/fonts/IntegralCF-Regular.svg#IntegralCF-Regular")
+			format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Integral CF";
+	src: url("../../assets/fonts/IntegralCF-Medium.eot");
+	src: url("../../assets/fonts/IntegralCF-Medium.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../assets/fonts/IntegralCF-Medium.woff2") format("woff2"),
+		url("../../assets/fonts/IntegralCF-Medium.woff") format("woff"),
+		url("../../assets/fonts/IntegralCF-Medium.ttf") format("truetype"),
+		url("../../assets/fonts/IntegralCF-Medium.svg#IntegralCF-Medium")
+			format("svg");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Integral CF";
+	src: url("../../assets/fonts/IntegralCF-Bold.eot");
+	src: url("../../assets/fonts/IntegralCF-Bold.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../assets/fonts/IntegralCF-Bold.woff2") format("woff2"),
+		url("../../assets/fonts/IntegralCF-Bold.woff") format("woff"),
+		url("../../assets/fonts/IntegralCF-Bold.ttf") format("truetype"),
+		url("../../assets/fonts/IntegralCF-Bold.svg#IntegralCF-Bold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("../../assets/fonts/Satoshi-Medium.eot");
+	src: url("../../assets/fonts/Satoshi-Medium.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../assets/fonts/Satoshi-Medium.woff2") format("woff2"),
+		url("../../assets/fonts/Satoshi-Medium.woff") format("woff"),
+		url("../../assets/fonts/Satoshi-Medium.ttf") format("truetype"),
+		url("../../assets/fonts/Satoshi-Medium.svg#Satoshi-Medium") format("svg");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("../../assets/fonts/Satoshi-Bold.eot");
+	src: url("../../assets/fonts/Satoshi-Bold.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../assets/fonts/Satoshi-Bold.woff2") format("woff2"),
+		url("../../assets/fonts/Satoshi-Bold.woff") format("woff"),
+		url("../../assets/fonts/Satoshi-Bold.ttf") format("truetype"),
+		url("../../assets/fonts/Satoshi-Bold.svg#Satoshi-Bold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("../../assets/fonts/Satoshi-Regular.eot");
+	src: url("../../assets/fonts/Satoshi-Regular.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../assets/fonts/Satoshi-Regular.woff2") format("woff2"),
+		url("../../assets/fonts/Satoshi-Regular.woff") format("woff"),
+		url("../../assets/fonts/Satoshi-Regular.ttf") format("truetype"),
+		url("../../assets/fonts/Satoshi-Regular.svg#Satoshi-Regular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("../../assets/fonts/Satoshi-Black.eot");
+	src: url("../../assets/fonts/Satoshi-Black.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../assets/fonts/Satoshi-Black.woff2") format("woff2"),
+		url("../../assets/fonts/Satoshi-Black.woff") format("woff"),
+		url("../../assets/fonts/Satoshi-Black.ttf") format("truetype"),
+		url("../../assets/fonts/Satoshi-Black.svg#Satoshi-Black") format("svg");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
