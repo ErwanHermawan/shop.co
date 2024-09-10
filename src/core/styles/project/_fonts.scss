@@ -101,3 +101,16 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+	font-family: "Ecommerce";
+	src: url("../../assets/fonts/icon/Ecommerce.eot?rb4wna");
+	src: url("../../assets/fonts/icon/Ecommerce.eot?rb4wna#iefix")
+			format("embedded-opentype"),
+		url("../../assets/fonts/icon/Ecommerce.ttf?rb4wna") format("truetype"),
+		url("../../assets/fonts/icon/Ecommerce.woff?rb4wna") format("woff"),
+		url("../../assets/fonts/icon/Ecommerce.svg?rb4wna#Ecommerce") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
