@@ -11,39 +11,35 @@ const Button = (props) => {
 	const { variant = "primary", category, children, href, icon } = props;
 
 	const iconCont = icon && <SystemIcon name={icon} />;
+
 	let variantStyle = style.btn;
-	if (variant === "primary") {
-		variantStyle += " " + style.btnPrimary;
-	} else if (variant === "accent") {
-		variantStyle += " " + style.btnAccent;
-	} else if (variant === "white") {
-		variantStyle += " " + style.btnWhite;
-	} else if (category === "outline") {
-		variantStyle += " " + style.btnOutline;
-	}
-
-	if (category === "icon") {
-		variantStyle += " " + style.btnIcon;
-	}
-
-	if (category === "rounded") {
-		variantStyle += " " + style.btnRounded;
-	}
-
-	if (href) {
-		return (
-			<Link {...props} className={variantStyle}>
-				{children}
-				{iconCont}
-			</Link>
-		);
+	switch (variant) {
+		case "primary":
+			variantStyle += " " + style.btnPrimary;
+			break;
+		case "white":
+			variantStyle += " " + style.btnWhite;
+			break;
+		case "outlite":
+			variantStyle += " " + style.btnOutline;
+			break;
 	}
 
 	return (
-		<button {...props} className={variantStyle}>
-			{children}
-			{iconCont}
-		</button>
+		<>
+			{href && (
+				<Link {...props} className={variantStyle}>
+					{children}
+					{iconCont}
+				</Link>
+			)}
+			{!href && (
+				<button {...props} className={variantStyle}>
+					{children}
+					{iconCont}
+				</button>
+			)}
+		</>
 	);
 };
 

@@ -2,7 +2,7 @@
 import style from "./style.module.scss";
 
 const FormControl = (props) => {
-	const { variant = "input", color = "black", list = [] } = props;
+	const { variant = "input", placeholder, color = "black", list = [] } = props;
 
 	if (variant === "select") {
 		return (
@@ -18,7 +18,13 @@ const FormControl = (props) => {
 		);
 	}
 
-	return <input {...props} className={`${style.input} ${color}`} />;
+	return (
+		<input
+			{...props}
+			className={`${style.input} ${color}`}
+			placeholder={placeholder}
+		/>
+	);
 };
 
 export default FormControl;
