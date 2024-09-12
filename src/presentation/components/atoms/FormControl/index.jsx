@@ -1,29 +1,57 @@
+// -- atom
+import SystemIcon from "@atoms/SystemIcon";
+
 // -- style
 import style from "./style.module.scss";
 
 const FormControl = (props) => {
-	const { variant = "input", placeholder, color = "black", list = [] } = props;
+	const { variant = "input", placeholder, color, icon, list } = props;
 
-	if (variant === "select") {
-		return (
-			<select {...props} className={`${style.select} ${color}`}>
-				{list?.map((val, idx) => {
-					return (
-						<option value={val.value} key={`op-${idx}`}>
-							{val.unit}
-						</option>
-					);
-				})}
-			</select>
-		);
+	let colorStyle = "";
+	switch (color) {
+		case "grey":
+			colorStyle = style.inputGrey;
+			break;
 	}
 
 	return (
-		<input
-			{...props}
-			className={`${style.input} ${color}`}
-			placeholder={placeholder}
-		/>
+		<>
+			{/* input select */}
+			{variant == "select" && (
+				<select {...props} className={`${style.select} ${color && color}`}>
+					{list?.map((val, idx) => {
+						return (
+							<option value={val.value} key={`op-${idx}`}>
+								{val.unit}
+							</option>
+						);
+					})}
+				</select>
+			)}
+
+			{/* input group */}
+			{icon && (
+				<div className={style.group}>
+					<input
+						{...props}
+						className={`${style.input} ${style.inputGroup} ${
+							color !== undefined ? colorStyle : ""
+						}`}
+						placeholder={placeholder}
+					/>
+					<SystemIcon name={icon} />
+				</div>
+			)}
+
+			{/* input default */}
+			{!icon && (
+				<input
+					{...props}
+					className={`${style.input} ${color !== undefined ? color : ""}`}
+					placeholder={placeholder}
+				/>
+			)}
+		</>
 	);
 };
 

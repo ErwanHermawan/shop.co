@@ -5,9 +5,13 @@ import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+// -- atoms
+import FormControl from "@atoms/FormControl";
+
 // -- style
 import style from "./style.module.scss";
 
+// -- data
 import headerData from "./headerData";
 
 const Header = (props) => {
@@ -43,14 +47,11 @@ const Header = (props) => {
 							))}
 						</ul>
 						<div className={style.search}>
-							<div className={style.searchGroup}>
-								<input
-									type="text"
-									placeholder="Search for products..."
-									className={style.searchInput}
-								/>
-								<i className={`fi-search ${style.searchIcon}`}></i>
-							</div>
+							<FormControl
+								placeholder="Search for products..."
+								icon="search"
+								color="grey"
+							/>
 						</div>
 						<div className={style.action}>
 							<button className={style.button}>

@@ -52,24 +52,7 @@
 }
 
 .search {
-	&Group {
-		position: relative;
-	}
-	&Input {
-		padding: 12px 16px 12px 48px;
-		background-color: color(grey, 4);
-		border: solid 1px color(grey, 4);
-		border-radius: 24px;
-		width: 576px;
-	}
-	&Icon {
-		position: absolute;
-		left: 16px;
-		top: 50%;
-		transform: translateY(-50%);
-		@include font-size(24);
-		color: color(grey, 1);
-	}
+	width: 576px;
 }
 
 .action {
