@@ -1,0 +1,29 @@
+@import "core/styles/_assets.scss";
+
+.subscribe {
+	background-color: color(primary);
+	padding: 36px 64px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: -140px;
+}
+
+.title {
+	color: color(white);
+	@include font-size(40);
+	font-family: ff(title);
+	width: 552px;
+}
+
+.form {
+	width: 348px;
+}
+
+.button {
+	margin-top: 12px;
+}

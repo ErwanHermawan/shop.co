@@ -2,6 +2,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// -- components
+import Subscribe from "@molecules/Subscribe";
+
 // -- style
 import style from "./style.module.scss";
 
@@ -14,6 +17,7 @@ const Footer = (props) => {
 			<div className="container">
 				{/* main footer */}
 				<div className={style.main}>
+					<Subscribe />
 					{/* about */}
 					<div className={style.about}>
 						<Link href={footerData.logo.to} className={style.logo}>

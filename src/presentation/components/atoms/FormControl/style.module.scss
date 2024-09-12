@@ -19,12 +19,12 @@
 	width: 100%;
 	border: 0;
 	outline: 0;
-	background-color: transparent;
+	background-color: color(white);
 	padding: 12px 16px;
 	color: color(primary);
 	@include font-size(16);
 	@include placeholder-color(color(grey, 1));
-	border: 1px solid color(primary);
+	border: 1px solid color(white);
 	border-radius: 24px;
 	transition: all 0.3s ease;
 	&:focus {
