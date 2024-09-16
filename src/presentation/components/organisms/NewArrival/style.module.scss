@@ -1,0 +1,26 @@
+@import "core/styles/_assets.scss";
+
+.wrapper {
+	padding: 72px 0 64px;
+	border-bottom: solid 1px color(grey, 2);
+}
+
+.title {
+	@include font-size(48);
+	font-family: ff(title);
+	text-align: center;
+	margin-bottom: 56px;
+}
+
+.button {
+	width: 218px;
+	margin: 0 auto;
+}
+
+.list {
+	display: flex;
+	justify-content: space-between;
+	align-items: top;
+	gap: 20px;
+	margin-bottom: 40px;
+}

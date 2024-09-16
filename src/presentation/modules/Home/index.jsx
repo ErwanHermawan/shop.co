@@ -9,6 +9,7 @@ import useStateHeader from "core/states/header";
 // -- organisms
 import Banner from "@organisms/Banner";
 import Brands from "@organisms/Brands";
+import NewArrival from "@organisms/NewArrival";
 
 const Home = (props) => {
 	// set menu
@@ -22,6 +23,7 @@ const Home = (props) => {
 		<>
 			<Banner />
 			<Brands />
+			<NewArrival />
 		</>
 	);
 };

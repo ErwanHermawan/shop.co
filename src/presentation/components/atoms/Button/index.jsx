@@ -20,7 +20,7 @@ const Button = (props) => {
 		case "white":
 			variantStyle += " " + style.btnWhite;
 			break;
-		case "outlite":
+		case "outline":
 			variantStyle += " " + style.btnOutline;
 			break;
 	}
