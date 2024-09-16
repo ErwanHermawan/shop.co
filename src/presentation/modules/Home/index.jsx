@@ -8,6 +8,7 @@ import useStateHeader from "core/states/header";
 
 // -- organisms
 import Banner from "@organisms/Banner";
+import Brands from "@organisms/Brands";
 
 const Home = (props) => {
 	// set menu
@@ -15,11 +16,12 @@ const Home = (props) => {
 
 	useEffect(() => {
 		setMenu("");
-	}, []);
+	}, [setMenu]);
 
 	return (
 		<>
 			<Banner />
+			<Brands />
 		</>
 	);
 };

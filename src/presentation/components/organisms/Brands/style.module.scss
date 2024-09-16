@@ -1,0 +1,38 @@
+@import "core/styles/_assets.scss";
+
+.brands {
+	background-color: color(primary);
+	position: relative;
+	height: 122px;
+}
+
+.wrapper {
+	position: absolute;
+	left: calc(50% - 620px);
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	z-index: 2;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 106px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.image {
+	display: block;
+	height: 38px;
+	width: auto;
+	background-size: contain;
+}
