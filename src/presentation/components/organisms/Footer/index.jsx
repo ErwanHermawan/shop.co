@@ -1,4 +1,7 @@
+"use client";
+
 // -- core
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,6 +15,33 @@ import style from "./style.module.scss";
 import footerData from "./footerData";
 
 const Footer = (props) => {
+	const _width = 768; // Set your desired width here
+
+	const handleFooterSticky = () => {
+		const footerElement = document.querySelector(`.${style.footer}`);
+		const mainSiteElement = document.querySelector(".main");
+
+		console.log(footerElement);
+		if (footerElement && mainSiteElement) {
+			const footerHeight = footerElement.offsetHeight;
+
+			if (window.innerWidth > _width) {
+				mainSiteElement.style.paddingBottom = `${footerHeight + 92}px`;
+			} else {
+				mainSiteElement.removeAttribute("style");
+			}
+		}
+	};
+
+	useEffect(() => {
+		// Handle footer sticky on initial render and window resize
+		handleFooterSticky();
+		window.addEventListener("resize", handleFooterSticky);
+
+		// Cleanup the event listener when component unmounts
+		return () => window.removeEventListener("resize", handleFooterSticky);
+	}, []);
+
 	return (
 		<footer className={style.footer}>
 			<div className="container">

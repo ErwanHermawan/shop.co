@@ -6,6 +6,9 @@ import { useEffect } from "react";
 // -- states
 import useStateHeader from "core/states/header";
 
+// -- organisms
+import Banner from "@organisms/Banner";
+
 const Home = (props) => {
 	// set menu
 	const { setMenu } = useStateHeader();
@@ -16,9 +19,7 @@ const Home = (props) => {
 
 	return (
 		<>
-			<div className="container">
-				<h1>Home Page</h1>
-			</div>
+			<Banner />
 		</>
 	);
 };

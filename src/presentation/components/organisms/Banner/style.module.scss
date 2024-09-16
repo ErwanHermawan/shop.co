@@ -1,0 +1,103 @@
+@import "core/styles/_assets.scss";
+
+.banner {
+	background-color: color(grey, 4);
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+	gap: 24px;
+}
+
+.image {
+	position: relative;
+	&El {
+		display: block;
+		width: 674px;
+		height: 664px;
+		background-position: center;
+		background-size: cover;
+	}
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 56px;
+		height: 56px;
+		top: 50%;
+		left: 32px;
+		@include bg-img("dummy/light.svg");
+	}
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 104px;
+		height: 104px;
+		top: 96px;
+		right: 16px;
+		@include bg-img("dummy/light.svg");
+		background-size: 100%;
+	}
+}
+
+.text {
+	width: 576px;
+}
+
+.title {
+	@include font-size(64);
+	font-family: ff(title);
+	margin-bottom: 32px;
+}
+
+.description {
+	color: color(grey, 1);
+	margin-bottom: 32px;
+}
+
+.button {
+	width: 210px;
+	margin-bottom: 48px;
+}
+
+.widget {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	&Item {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		margin-right: 40px;
+		&:last-child {
+			margin-right: 0;
+		}
+		&::after {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: -20px;
+			width: 1px;
+			height: 100%;
+			background-color: color(grey, 2);
+		}
+		&:last-child {
+			&::after {
+				content: none;
+			}
+		}
+	}
+	&Number {
+		@include font-size(40);
+		font-weight: fw(semi-bold);
+	}
+	&Description {
+		color: color(grey, 1);
+		margin-bottom: 0;
+	}
+}
