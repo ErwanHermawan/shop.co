@@ -10,7 +10,7 @@ const Subscribe = (props) => {
 		<div className={style.subscribe}>
 			<h3 className={style.title}>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h3>
 			<div className={style.form}>
-				<FormControl placeholder="Search for products..." icon="search" />
+				<FormControl placeholder="Enter your email address" icon="search" />
 				<div className={style.button}>
 					<Button variant="white">Subscribe to Newsletter</Button>
 				</div>
