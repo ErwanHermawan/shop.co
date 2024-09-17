@@ -26,7 +26,7 @@ const ProductItem = (props) => {
 						// Push full stars
 						for (let i = 1; i <= fullStars; i++) {
 							stars.push(
-								<li className={style.item} key={i}>
+								<li className={style.item} key={`star-${i}`}>
 									<i className={`fi-star ${style.icon}`}></i>
 								</li>
 							);
@@ -35,11 +35,12 @@ const ProductItem = (props) => {
 						// Push half star if applicable
 						if (hasHalfStar) {
 							stars.push(
-								<li className={style.item}>
+								<li className={style.item} key={`star-half`}>
 									<i className={`fi-star-half ${style.icon}`}></i>
 								</li>
 							);
 						}
+
 						return stars;
 					})()}
 
@@ -50,7 +51,19 @@ const ProductItem = (props) => {
 						</p>
 					</li>
 				</ul>
-				<p className={style.price}>${price}</p>
+				<div className={style.priceWrapper}>
+					{discount ? (
+						<>
+							<p className={style.discountPrice}>
+								${price - (price * discount) / 100}
+							</p>
+							<p className={style.fullPrice}>${price}</p>
+							<p className={style.percentage}>-{discount}%</p>
+						</>
+					) : (
+						<p className={style.price}>${price}</p>
+					)}
+				</div>
 			</div>
 		</section>
 	);

@@ -55,8 +55,30 @@
 	}
 }
 
+.priceWrapper {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.discountPrice,
+.fullPrice,
 .price {
 	@include font-size(24);
 	font-weight: fw(bold);
 	margin-bottom: 0;
+}
+
+.fullPrice {
+	color: color(grey, 1);
+	text-decoration: line-through;
+}
+
+.percentage {
+	margin: 0;
+	padding: 4px 12px;
+	background-color: rgba(color(danger, 1), 0.1);
+	color: color(danger, 1);
+	border-radius: 16px;
+	@include font-size(12);
 }

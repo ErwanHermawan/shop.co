@@ -21,7 +21,6 @@ const Footer = (props) => {
 		const footerElement = document.querySelector(`.${style.footer}`);
 		const mainSiteElement = document.querySelector(".main");
 
-		console.log(footerElement);
 		if (footerElement && mainSiteElement) {
 			const footerHeight = footerElement.offsetHeight;
 
