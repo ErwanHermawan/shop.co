@@ -11,12 +11,14 @@ import Banner from "@organisms/Banner";
 import Brands from "@organisms/Brands";
 import NewArrival from "@organisms/NewArrival";
 import TopSelling from "@organisms/TopSelling";
+import DressStyle from "@organisms/dressStyle";
 
 // -- dummy data
 import bannerData from "./data/bannerData";
 import brandsData from "./data/brandsData";
 import newArrivalData from "./data/newArrivalData";
 import topSellingData from "./data/topSellingData";
+import dressStyleData from "./data/dressStyleData";
 
 const Home = (props) => {
 	// set menu
@@ -32,6 +34,7 @@ const Home = (props) => {
 			<Brands {...brandsData} />
 			<NewArrival {...newArrivalData} />
 			<TopSelling {...topSellingData} />
+			<DressStyle {...dressStyleData} />
 		</>
 	);
 };
