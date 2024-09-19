@@ -10,7 +10,7 @@ const topSellingData = {
 		to: "/",
 		text: "View All",
 	},
-	product: [
+	products: [
 		{
 			image: product1,
 			to: "/",

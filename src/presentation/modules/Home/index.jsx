@@ -12,6 +12,12 @@ import Brands from "@organisms/Brands";
 import NewArrival from "@organisms/NewArrival";
 import TopSelling from "@organisms/TopSelling";
 
+// -- dummy data
+import bannerData from "./data/bannerData";
+import brandsData from "./data/brandsData";
+import newArrivalData from "./data/newArrivalData";
+import topSellingData from "./data/topSellingData";
+
 const Home = (props) => {
 	// set menu
 	const { setMenu } = useStateHeader();
@@ -22,10 +28,10 @@ const Home = (props) => {
 
 	return (
 		<>
-			<Banner />
-			<Brands />
-			<NewArrival />
-			<TopSelling />
+			<Banner {...bannerData} />
+			<Brands {...brandsData} />
+			<NewArrival {...newArrivalData} />
+			<TopSelling {...topSellingData} />
 		</>
 	);
 };
