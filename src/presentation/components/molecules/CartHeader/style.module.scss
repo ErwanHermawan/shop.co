@@ -1,0 +1,85 @@
+@import "core/styles/_assets.scss";
+
+.cart {
+	background-color: color(white);
+	min-width: 320px;
+	overflow-y: auto;
+	@include shadow(16);
+	border-top: solid 2px color(primary);
+	border-radius: 0 0 16px 16px;
+}
+
+.head {
+	padding: 12px 16px;
+	border-bottom: solid 1px color(grey, 4);
+}
+
+.title {
+	display: block;
+	position: relative;
+	text-align: center;
+	margin-bottom: 0;
+	@include font-size(18);
+}
+
+.body {
+	padding: 16px 16px 68px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	overflow-y: auto;
+	max-height: 380px;
+}
+
+.item {
+	display: flex;
+	width: 100%;
+	align-items: top;
+	gap: 12px;
+}
+
+.image {
+	&El {
+		width: 64px;
+		height: 64px;
+	}
+}
+
+.text {
+	width: 212px;
+}
+
+.name {
+	@include multiline-ellipsis(1);
+	font-weight: fw(regular);
+	margin-bottom: 4px;
+}
+
+.price {
+	@include font-size(18);
+	font-weight: fw(bold);
+	margin-bottom: 0;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: color(white);
+	border-radius: 0 0 16px 16px;
+	border-top: solid 1px color(grey, 4);
+}
+
+.link {
+	text-decoration: none;
+	display: block;
+	padding: 12px 16px 16px;
+	@include font-size(18);
+	font-weight: fw(bold);
+	text-align: center;
+	i {
+		margin-left: 8px;
+	}
+}

@@ -8,6 +8,9 @@ import Image from "next/image";
 // -- atoms
 import FormControl from "@atoms/FormControl";
 
+// -- molecules
+import CartHeader from "@molecules/CartHeader";
+
 // -- style
 import style from "./style.module.scss";
 
@@ -53,13 +56,21 @@ const Header = (props) => {
 								color="grey"
 							/>
 						</div>
-						<div className={style.action}>
-							<button className={style.button}>
-								<i className={`fi-cart`}></i>
-							</button>
-							<button className={style.button}>
-								<i className={`fi-user`}></i>
-							</button>
+						<div className={style.act}>
+							<div className={style.actList}>
+								<Link href="/cart" className={style.actLink}>
+									<i className={`fi-cart`}></i>
+									<span className={style.actBadge}>10</span>
+									<div className={style.cart}>
+										<CartHeader cart={headerData.cart} />
+									</div>
+								</Link>
+							</div> 
+							<div>
+								<Link href="/profile" className={style.actLink}>
+									<i className={`fi-user`}></i>
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>

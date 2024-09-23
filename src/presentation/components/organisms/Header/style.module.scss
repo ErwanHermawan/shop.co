@@ -55,16 +55,41 @@
 	width: 576px;
 }
 
-.action {
+.act {
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	&List {
+		position: relative;
+	}
+	&Link {
+		text-decoration: none;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		padding: 4px;
+		@include font-size(24);
+	}
+	&Badge {
+		position: absolute;
+		top: -4px;
+		right: -4px;
+		width: 18px;
+		height: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		@include font-size(10);
+		font-weight: fw(bold);
+		background-color: color(primary);
+		color: color(white);
+		border-radius: 4px;
+	}
 }
 
-.button {
-	background-color: transparent;
-	border: none;
-	outline: none;
-	padding: 4px;
-	@include font-size(24);
+.cart {
+	position: absolute;
+	top: 65px;
+	right: 0;
 }
