@@ -7,7 +7,6 @@ import style from "./style.module.scss";
 
 const CartHeader = (props) => {
 	const { cart } = props;
-	console.log(cart);
 	return (
 		<div className={style.cart}>
 			<div className={style.head}>

@@ -18,6 +18,10 @@ import style from "./style.module.scss";
 import headerData from "./headerData";
 
 const Header = (props) => {
+	const [isHovered, setIsHovered] = useState(false);
+
+	console.log(isHovered);
+
 	return (
 		<header className={style.header}>
 			<div className={style.promo}>
@@ -57,15 +61,19 @@ const Header = (props) => {
 							/>
 						</div>
 						<div className={style.act}>
-							<div className={style.actList}>
+							<div
+								className={style.actList}
+								onMouseEnter={() => setIsHovered(true)}
+								onMouseLeave={() => setIsHovered(false)}
+							>
 								<Link href="/cart" className={style.actLink}>
 									<i className={`fi-cart`}></i>
 									<span className={style.actBadge}>10</span>
 									<div className={style.cart}>
-										<CartHeader cart={headerData.cart} />
+										{isHovered && <CartHeader cart={headerData.cart} />}
 									</div>
 								</Link>
-							</div> 
+							</div>
 							<div>
 								<Link href="/profile" className={style.actLink}>
 									<i className={`fi-user`}></i>
