@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // -- components
+import Logo from "@atoms/Logo";
 import Subscribe from "@molecules/Subscribe";
 
 // -- style
@@ -49,14 +50,8 @@ const Footer = (props) => {
 					<Subscribe />
 					{/* about */}
 					<div className={style.about}>
-						<Link href={footerData.logo.to} className={style.logo}>
-							{/* logo */}
-							<Image
-								src={footerData.logo.img}
-								alt={footerData.logo.alt}
-								className={style.logoEl}
-							/>
-						</Link>
+						{/* logo */}
+						<Logo className={style.logo} />
 						{/* about text */}
 						<p className={style.text}>{footerData.about}</p>
 						{/* sosmed */}

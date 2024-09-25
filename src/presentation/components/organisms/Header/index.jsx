@@ -7,6 +7,7 @@ import Image from "next/image";
 
 // -- atoms
 import FormControl from "@atoms/FormControl";
+import Logo from "@atoms/Logo";
 
 // -- molecules
 import CartHeader from "@molecules/CartHeader";
@@ -19,8 +20,6 @@ import headerData from "./headerData";
 
 const Header = (props) => {
 	const [isHovered, setIsHovered] = useState(false);
-
-	console.log(isHovered);
 
 	return (
 		<header className={style.header}>
@@ -40,9 +39,9 @@ const Header = (props) => {
 			<div className={style.main}>
 				<div className="container">
 					<div className={style.wrapper}>
-						<Link href={headerData.logo.to} className={style.logo}>
-							<Image src={headerData.logo.img} alt={headerData.logo.alt} />
-						</Link>
+						{/* logo */}
+						<Logo />
+						{/* navigation */}
 						<ul className={style.nav}>
 							{headerData.menu.map((val, idx) => (
 								<li className={style.item} key={`mn-${idx}`}>
@@ -53,6 +52,7 @@ const Header = (props) => {
 								</li>
 							))}
 						</ul>
+						{/* search */}
 						<div className={style.search}>
 							<FormControl
 								placeholder="Search for products..."
@@ -60,6 +60,7 @@ const Header = (props) => {
 								color="grey"
 							/>
 						</div>
+						{/* action */}
 						<div className={style.act}>
 							<div
 								className={style.actList}
