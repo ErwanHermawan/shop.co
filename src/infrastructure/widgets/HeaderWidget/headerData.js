@@ -18,6 +18,152 @@ const headerData = {
 			text: "Shop",
 			dropdown: true,
 			active: "shop",
+			category: [
+				{
+					name: "Shirt",
+					to: "/shirt",
+					list: [
+						{
+							name: "Linen Shirt",
+							to: "/",
+						},
+						{
+							name: "Polo Shirt",
+							to: "/",
+						},
+						{
+							name: "Dress Shirt",
+							to: "/",
+						},
+						{
+							name: "Chambray",
+							to: "/",
+						},
+						{
+							name: "Overshirt",
+							to: "/",
+						},
+						{
+							name: "Hawaiian Shirt",
+							to: "/",
+						},
+						{
+							name: "Flannel Shirt",
+							to: "/",
+						},
+						{
+							name: "Cuban Collar",
+							to: "/",
+						},
+					],
+				},
+				{
+					name: "Formal",
+					to: "/formal",
+					list: [
+						{
+							name: "Blouse",
+							to: "/",
+						},
+						{
+							name: "Suite",
+							to: "/",
+						},
+						{
+							name: "Dress",
+							to: "/",
+						},
+						{
+							name: "Gown",
+							to: "/",
+						},
+						{
+							name: "Vest",
+							to: "/",
+						},
+						{
+							name: "Trench Coat",
+							to: "/",
+						},
+						{
+							name: "Cargo Pants",
+							to: "/",
+						},
+						{
+							name: "Blazer",
+							to: "/",
+						},
+					],
+				},
+				{
+					name: "Party",
+					to: "/party",
+					list: [
+						{
+							name: "Sheath Dress",
+							to: "/",
+						},
+						{
+							name: "Shift Dress",
+							to: "/",
+						},
+						{
+							name: "Ball gown",
+							to: "/",
+						},
+						{
+							name: "Apron Dress",
+							to: "/",
+						},
+						{
+							name: "Asymmetric Dress",
+							to: "/",
+						},
+						{
+							name: "Balloon Dress",
+							to: "/",
+						},
+						{
+							name: "Maxi Dress",
+							to: "/",
+						},
+						{
+							name: "Minidress",
+							to: "/",
+						},
+					],
+				},
+				{
+					name: "Gym",
+					to: "/gym",
+					list: [
+						{
+							name: "Technical T-Shirt",
+							to: "/",
+						},
+						{
+							name: "Gym Leggings",
+							to: "/",
+						},
+						{
+							name: "Training Socks",
+							to: "/",
+						},
+						{
+							name: "Sports Bra",
+							to: "/",
+						},
+						{
+							name: "Gym Shoes",
+							to: "/",
+						},
+						{
+							name: "Gym Vest",
+							to: "/",
+						},
+					],
+				},
+			],
 		},
 		{
 			to: "/sale",
