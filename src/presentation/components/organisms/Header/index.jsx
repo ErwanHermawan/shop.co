@@ -15,10 +15,8 @@ import CartHeader from "@molecules/CartHeader";
 // -- style
 import style from "./style.module.scss";
 
-// -- data
-import headerData from "./headerData";
-
 const Header = (props) => {
+	const { promo, menu, cart } = props;
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
@@ -26,12 +24,9 @@ const Header = (props) => {
 			<div className={style.promo}>
 				<div className="container">
 					<p className={style.promoText}>
-						{headerData.promo.text}
-						<Link
-							href={headerData.promo.button.to}
-							className={style.promoButton}
-						>
-							{headerData.promo.button.text}
+						{promo.text}
+						<Link href={promo.button.to} className={style.promoButton}>
+							{promo.button.text}
 						</Link>
 					</p>
 				</div>
@@ -43,7 +38,7 @@ const Header = (props) => {
 						<Logo />
 						{/* navigation */}
 						<ul className={style.nav}>
-							{headerData.menu.map((val, idx) => (
+							{menu.map((val, idx) => (
 								<li className={style.item} key={`mn-${idx}`}>
 									<Link href={val.to} className={style.link}>
 										{val.text}
@@ -71,7 +66,7 @@ const Header = (props) => {
 									<i className={`fi-cart`}></i>
 									<span className={style.actBadge}>10</span>
 									<div className={style.cart}>
-										{isHovered && <CartHeader cart={headerData.cart} />}
+										{isHovered && <CartHeader cart={cart} />}
 									</div>
 								</Link>
 							</div>

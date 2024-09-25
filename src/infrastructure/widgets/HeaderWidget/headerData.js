@@ -1,6 +1,3 @@
-// -- asset image
-import logo from "core/assets/img/logo/shop.co.svg";
-
 // cart image
 import product1 from "core/assets/img/dummy/product-1.png";
 import product2 from "core/assets/img/dummy/product-2.png";
@@ -14,11 +11,6 @@ const headerData = {
 			to: "/signup",
 			text: "Sign Up Now",
 		},
-	},
-	logo: {
-		to: "/",
-		img: logo,
-		alt: "SHOP.CO",
 	},
 	menu: [
 		{

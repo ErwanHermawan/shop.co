@@ -1,13 +1,16 @@
 // -- models
-import headerModel from "@models/header";
+// import headerModel from "@models/header";
 
 // -- organisms
 import Header from "@organisms/Header";
 
-const HeaderWidget = async () => {
-	const { data, error } = await headerModel.list();
+// -- dummy data
+import headerData from "./headerData";
 
-	return <Header data={data?.data} error={error} />;
+const HeaderWidget = async () => {
+	// const { data, error } = await headerModel.list();
+
+	return <Header {...headerData} />;
 };
 
 export default HeaderWidget;
