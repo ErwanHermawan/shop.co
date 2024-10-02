@@ -23,4 +23,7 @@
 	align-items: top;
 	gap: 20px;
 	margin-bottom: 40px;
+	@include medium {
+		flex-direction: column;
+	}
 }

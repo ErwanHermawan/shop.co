@@ -11,6 +11,9 @@
 	width: 100%;
 	left: 0;
 	top: -140px;
+	@include medium {
+		flex-direction: column;
+	}
 }
 
 .title {
@@ -18,6 +21,9 @@
 	@include font-size(40);
 	font-family: ff(title);
 	width: 552px;
+	@include medium {
+		width: 100%;
+	}
 }
 
 .form {

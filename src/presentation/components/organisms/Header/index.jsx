@@ -52,15 +52,14 @@ const Header = (props) => {
 								<li
 									className={style.item}
 									key={`mn-${idx}`}
-									onMouseEnter={() => val.category && setIsMenuHovered(idx)} // Only set hover if category exists
-									onMouseLeave={() => setIsMenuHovered(null)} // Reset hover state on leave
+									onMouseEnter={() => val.category && setIsMenuHovered(idx)}
+									onMouseLeave={() => setIsMenuHovered(null)}
 								>
 									{/* Main link */}
 									<Link href={val.to} className={style.link}>
 										{val.text}
 										{val.dropdown && <i className="fi-chevron-down"></i>}
 									</Link>
-
 									{/* Dropdown menu */}
 									{isMenuHovered === idx && val.category && (
 										<div className={style.category}>

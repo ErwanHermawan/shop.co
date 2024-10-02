@@ -10,6 +10,9 @@
 	align-items: center;
 	flex-direction: row-reverse;
 	gap: 24px;
+	@include medium {
+		flex-direction: column;
+	}
 }
 
 .image {
@@ -46,6 +49,9 @@
 
 .text {
 	width: 576px;
+	@include medium {
+		width: 100%;
+	}
 }
 
 .title {

@@ -18,6 +18,9 @@
 	color: color(white);
 	&Text {
 		margin-bottom: 0;
+		@include small {
+			@include font-size(12);
+		}
 	}
 	&Button {
 		font-weight: bold;
@@ -43,6 +46,10 @@
 	display: flex;
 	align-items: center;
 	gap: 24px;
+	@include medium {
+		flex-direction: column;
+		display: none;
+	}
 }
 
 .link {
@@ -54,6 +61,9 @@
 
 .search {
 	width: 576px;
+	@include medium {
+		display: none;
+	}
 }
 
 .act {
