@@ -28,19 +28,19 @@
 	.header-on-scroll & {
 		padding-top: 96px;
 		@include medium {
-			padding-top: 72px;
+			padding-top: 112px;
 		}
 		@include small {
-			padding-top: 64px;
+			padding-top: 112px;
 		}
 	}
 	@include large {
 		padding-top: 112px;
 	}
 	@include medium {
-		padding-top: 72px;
+		padding-top: 112px;
 	}
 	@include small {
-		padding-top: 64px;
+		padding-top: 112px;
 	}
 }

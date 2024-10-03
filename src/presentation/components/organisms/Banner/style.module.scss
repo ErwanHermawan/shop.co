@@ -11,7 +11,7 @@
 	flex-direction: row-reverse;
 	gap: 24px;
 	@include medium {
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 }
 
@@ -23,6 +23,10 @@
 		height: 664px;
 		background-position: center;
 		background-size: cover;
+		@include medium {
+			height: auto;
+			width: 100%;
+		}
 	}
 	&::before {
 		content: "";
@@ -33,6 +37,14 @@
 		top: 50%;
 		left: 32px;
 		@include bg-img("dummy/light.svg");
+		background-position: center;
+		background-size: cover;
+		@include medium {
+			width: 44px;
+			height: 44px;
+			top: 100px;
+			left: 16px;
+		}
 	}
 	&::after {
 		content: "";
@@ -44,6 +56,12 @@
 		right: 16px;
 		@include bg-img("dummy/light.svg");
 		background-size: 100%;
+		@include medium {
+			width: 76px;
+			height: 76px;
+			top: 32px;
+			right: 0;
+		}
 	}
 }
 
@@ -51,6 +69,7 @@
 	width: 576px;
 	@include medium {
 		width: 100%;
+		padding-top: 32px;
 	}
 }
 
@@ -58,27 +77,40 @@
 	@include font-size(64);
 	font-family: ff(title);
 	margin-bottom: 32px;
+	@include medium {
+		@include font-size(32);
+		margin-bottom: 20px;
+	}
 }
 
 .description {
 	color: color(grey, 1);
 	margin-bottom: 32px;
+	@include small {
+		@include font-size(14);
+	}
 }
 
 .button {
 	width: 210px;
 	margin-bottom: 48px;
+	@include medium {
+		width: auto;
+		margin-bottom: 24px;
+	}
 }
 
 .widget {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	text-align: center;
 	&Item {
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
-		margin-right: 40px;
+		margin-right: 32px;
+		text-align: left;
 		&:last-child {
 			margin-right: 0;
 		}
@@ -97,13 +129,42 @@
 				content: none;
 			}
 		}
+		@include medium {
+			margin-right: 0;
+			&:last-child {
+				margin-top: 12px;
+			}
+			&::after {
+				content: none;
+			}
+			&:first-child {
+				margin-right: 32px;
+				&::after {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					right: -20px;
+					width: 1px;
+					height: 100%;
+					background-color: color(grey, 2);
+				}
+			}
+		}
 	}
 	&Number {
 		@include font-size(40);
 		font-weight: fw(semi-bold);
+		@include medium {
+			@include font-size(24);
+			margin-bottom: 0px;
+		}
 	}
 	&Description {
 		color: color(grey, 1);
 		margin-bottom: 0;
+		@include medium {
+			@include font-size(12);
+		}
 	}
 }
