@@ -1,0 +1,10 @@
+@import "core/styles/_assets.scss";
+
+.image {
+	width: 160px;
+	height: auto;
+	@include small {
+		width: 126px;
+		height: auto;
+	}
+}

@@ -44,8 +44,15 @@ const Header = (props) => {
 			<div className={style.main}>
 				<div className="container">
 					<div className={style.wrapper}>
-						{/* logo */}
-						<Logo />
+						<div className={style.left}>
+							<button type="button" className={style.burgerMenu}>
+								<span className={style.burgerMenuBar}></span>
+								<span className={style.burgerMenuBar}></span>
+								<span className={style.burgerMenuBar}></span>
+							</button>
+							{/* logo */}
+							<Logo />
+						</div>
 						{/* navigation */}
 						<ul className={style.nav}>
 							{menu.map((val, idx) => (
@@ -64,26 +71,36 @@ const Header = (props) => {
 									{isMenuHovered === idx && val.category && (
 										<div className={style.category}>
 											{val.category.map((valC, idxC) => (
-												<ul className={style.categoryList} key={`ct-${idxC}`}>
-													<h6 className={style.categoryTitle}>
-														<Link className={style.categoryLink} href={valC.to}>
-															{valC.name}
-														</Link>
-													</h6>
-													{valC.list.map((valCL, idxCL) => (
-														<li
-															className={style.categoryItem}
-															key={`ctl-${idxCL}`}
-														>
+												<>
+													<div
+														className={style.categoryWrapper}
+														key={`ctl-${idxC}`}
+													>
+														<h6 className={style.categoryTitle}>
 															<Link
-																href={valCL.to}
 																className={style.categoryLink}
+																href={valC.to}
 															>
-																{valCL.name}
+																{valC.name}
 															</Link>
-														</li>
-													))}
-												</ul>
+														</h6>
+														<ul className={style.categoryList}>
+															{valC.list.map((valCL, idxCL) => (
+																<li
+																	className={style.categoryItem}
+																	key={`ctl-${idxCL}`}
+																>
+																	<Link
+																		href={valCL.to}
+																		className={style.categoryLink}
+																	>
+																		{valCL.name}
+																	</Link>
+																</li>
+															))}
+														</ul>
+													</div>
+												</>
 											))}
 										</div>
 									)}
