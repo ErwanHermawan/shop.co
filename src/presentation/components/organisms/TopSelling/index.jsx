@@ -1,5 +1,8 @@
-// components
+// -- atoms
 import Button from "@atoms/Button";
+import TextTitle from "@atoms/TextTitle";
+
+// -- molecules
 import ProductItem from "@molecules/ProductItem";
 
 // -- style
@@ -10,7 +13,7 @@ const TopSelling = (props) => {
 	return (
 		<section className={style.topSelling}>
 			<div className="container">
-				<h2 className={style.title}>{title}</h2>
+				<TextTitle text={title} />
 				<div className={style.list}>
 					{products.map((val, idx) => (
 						<ProductItem key={`na-${idx}`} {...val} />

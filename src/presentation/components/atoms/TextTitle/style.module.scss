@@ -1,0 +1,11 @@
+@import "core/styles/_assets.scss";
+
+.title {
+	@include font-size(48);
+	font-family: ff(title);
+	text-align: center;
+	margin-bottom: 56px;
+	&Left {
+		text-align: left;
+	}
+}

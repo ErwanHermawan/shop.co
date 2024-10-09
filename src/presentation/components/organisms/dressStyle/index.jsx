@@ -1,6 +1,9 @@
-// components
+// -- core
 import Image from "next/image";
 import Link from "next/link";
+
+// -- atoms
+import TextTitle from "@atoms/TextTitle";
 
 // -- style
 import style from "./style.module.scss";
@@ -11,7 +14,7 @@ const DressStyle = (props) => {
 		<section className={style.dress}>
 			<div className="container">
 				<div className={style.box}>
-					<h2 className={style.title}>{title}</h2>
+					<TextTitle text={title} />
 					<div className={style.list}>
 						{categories.map((val, idx) => (
 							<div className={style.card} key={`ds-${idx}`}>
