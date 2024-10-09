@@ -6,8 +6,9 @@ import style from "./style.module.scss";
 
 const TestimonyItem = (props) => {
 	const { name, testimony, rating } = props;
+
 	return (
-		<section className={style.card}>
+		<div className={style.card}>
 			<div className={style.box}>
 				<ul className={style.star}>
 					{(() => {
@@ -35,18 +36,13 @@ const TestimonyItem = (props) => {
 
 						return stars;
 					})()}
-
-					<li className={style.item}>
-						<p className={style.rating}>
-							{rating}
-							<span className={style.ratingFull}>/5</span>
-						</p>
-					</li>
 				</ul>
-				<p className={style.name}>{name}</p>
+				<h5 className={style.name}>
+					{name} <i className="fi fi-check-circle"></i>
+				</h5>
 				<p className={style.testimony}>{testimony}</p>
 			</div>
-		</section>
+		</div>
 	);
 };
 
